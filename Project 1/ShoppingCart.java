@@ -10,17 +10,20 @@ public class ShoppingCart implements Serializable {
     public ShoppingCart() {
     }
 
+    /*
     public boolean addCart(Product product, int quantity)
     {
         cart.add(product, quantity);
         return true;
     }
-
+    */
     public Iterator getCart()
     {
         return cart.iterator();
     }
 
+    //Get total
+    /*
     public double getTotal() {
         double total = 0;
         if(total = 0)
@@ -34,6 +37,7 @@ public class ShoppingCart implements Serializable {
         }
         return total;
     }
+     */
 
     public String toString() {
         return cart.toString();

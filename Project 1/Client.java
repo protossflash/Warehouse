@@ -70,15 +70,4 @@ public class Client implements Serializable
         return 10000 + r.nextInt(20000);
     }
 
-    //Here is some test code to show my two classes: Client and ClientList
-    public static void main(String[] args)
-    {
-        Client testClient = new Client("Chase", "774 Avenue Lane", "643-327-2722");
-        ClientList testClientList = new ClientList();
-        testClientList.insertClient(testClient);
-        System.out.print("Here is a test example of my code storing a client, putting that client in a client list and dispalying the client " +
-                "information from the client list\n\n");
-        System.out.println(testClientList.toString());
-    }
-
 }

@@ -20,6 +20,7 @@ public class Test implements Serializable {
 
 
         //Testing Client
+        System.out.println("Testing ClientList.java and Client.java classes");
         Client testClient = new Client("Chase", "774 Avenue Lane", "643-327-2722");
         ClientList testClientList = new ClientList();
         testClientList.insertClient(testClient);

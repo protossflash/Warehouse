@@ -7,7 +7,7 @@ public class Supplier implements Serializable {
   private String phone;
   private String id;
   private static final String SUPPLIER_STRING = "M";
-	
+
   public  Supplier (String name, String address, String phone) {
     this.name = name;
     this.address = address;
@@ -43,9 +43,9 @@ public class Supplier implements Serializable {
     String string = "Supplier name: " + name + " address: " + address + " id: " + id + " phone: " + phone + "\n";
     return string;
   }
-	
-	public void createId(int sid){
-		this.id = this.id + "12300" + sid;
-	}
-	
+
+  public void createId(int sid){
+    this.id = this.id + "12300" + sid;
+  }
+
 }

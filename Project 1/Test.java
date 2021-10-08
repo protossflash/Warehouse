@@ -63,6 +63,18 @@ public class Test implements Serializable {
         Transaction testTransaction = new Transaction(new Date(), "This is a test Transaction", BigDecimal.TEN);
         System.out.print("\nHere is a test example of a test transaction and it's attributes (date, descprition and dollar amount)\n");
         System.out.println(testTransaction.toString());
+        System.out.println("\n");
+
+
+        //Testing ShoppingCart
+        System.out.println("Testing ShoppingCart.java");
+        ShoppingCart shoppingCart = new ShoppingCart();
+        System.out.println("Products in cart:");
+        Product p1 = new Product("1304", "Bestbuy Hammer", 20,10.00);
+        ProductList testsc = new ProductList();
+        testsc.insertProduct(p1);
+        System.out.println(testsc.toString());
+        System.out.println("\n");
     }
 
 }

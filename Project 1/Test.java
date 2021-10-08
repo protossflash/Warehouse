@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.*;
 import java.text.*;
 import java.io.*;
@@ -57,6 +58,11 @@ public class Test implements Serializable {
         testList.insertSupplier(test6);
         System.out.println("This is an automated test of the Supplier and SupplierList classes\n" + testList.toString());
         System.out.println("\n");
+
+        //Testing Transaction
+        Transaction testTransaction = new Transaction(new Date(), "This is a test Transaction", BigDecimal.TEN);
+        System.out.print("\nHere is a test example of a test transaction and it's attributes (date, descprition and dollar amount)\n");
+        System.out.println(testTransaction.toString());
     }
 
 }

@@ -276,7 +276,6 @@ public class UserInterface {
             }
 
             // Find the supplier.
-            System.out.println("found sid");
             Iterator s = warehouse.getSuppliers();
             while (s.hasNext()) {
                 if (((Supplier) s.next()).getSupplierId() == sid) {
@@ -286,7 +285,6 @@ public class UserInterface {
             }
 
             // Find the product.
-            System.out.println("found pid");
             Iterator p = warehouse.getProducts();
             while (p.hasNext()) {
                 if (((Product) p.next()).getProductId() == pid) {
@@ -296,7 +294,6 @@ public class UserInterface {
             }
 
         } while (!f_sid || !f_pid || price < 0);
-        System.out.println("got here");
         // sid, pid, and price are valid now.
         supplierProduct = warehouse.addSupplierProduct(sid, pid, price);
         if (supplierProduct != null) {

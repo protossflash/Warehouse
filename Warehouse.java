@@ -7,12 +7,16 @@ public class Warehouse implements Serializable {
 
     private ClientList clientList;
     private ProductList productList;
-
+    private SupplierList supplierList;
+    private SupplierProductList supplierProductList;
+    
     private static Warehouse warehouse;
 
     private Warehouse() {
         clientList = ClientList.instance();
        productList = ProductList.instance();
+       supplierList = SupplierList.instance(); 
+       supplierProductList = SupplierProductList.instance();       
     }
 
     public static Warehouse instance() {
@@ -45,8 +49,27 @@ public class Warehouse implements Serializable {
 
         return null;
     }
+    
+    public Supplier addSupplier(int sid) {
+    	Supplier supplier = new Supplier(sid);
 
+        if (supplierList.addSupplier(supplier)) {
+            return supplier;
+        }
 
+        return null;
+    }
+
+    public SupplierProduct addSupplierProduct(int sid, int pid, double price) {
+        SupplierProduct supplierProduct = new SupplierProduct(sid, pid, price);
+
+        if (supplierProductList.addSupplierProduct(supplierProduct)) {
+            return supplierProduct;
+        }
+
+        return null;
+    }
+    
 
     
     // End add methods.
@@ -60,6 +83,12 @@ public class Warehouse implements Serializable {
         return productList.getProducts();
     }
 
+    public Iterator<Supplier> getSuppliers() {
+        return supplierList.getSuppliers();
+    }
+    public Iterator<SupplierProduct> getSupplierProducts() {
+        return supplierProductList.getSupplierProducts();
+    }
     // End iterators.
 
     public static Warehouse retrieve() {
